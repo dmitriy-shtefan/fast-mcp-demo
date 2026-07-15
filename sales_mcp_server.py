@@ -1,12 +1,10 @@
-from __future__ import annotations
-
 import csv
 import os
 import sys
 from pathlib import Path
-from typing import Any
 
 from fastmcp import FastMCP
+
 from starlette.requests import Request
 from starlette.responses import JSONResponse
 
@@ -18,20 +16,20 @@ mcp = FastMCP("SalesAnalyticsMCP")
 
 @mcp.custom_route("/health", methods=["GET"])
 async def health_check(_request: Request) -> JSONResponse:
-    """Unauthenticated readiness endpoint for hosted deployments."""
     return JSONResponse({"status": "ok", "service": "sales-analytics-mcp"})
 
 
 def safe_csv_path(file_name: str) -> Path:
-    """Allow reading only CSV files inside this demo directory."""
     if not file_name or Path(file_name).is_absolute():
         raise ValueError("file_name must be a relative CSV file name")
 
     candidate = (BASE_DIR / file_name).resolve()
     if BASE_DIR not in candidate.parents and candidate != BASE_DIR:
         raise ValueError("file_name must stay inside the demo directory")
+
     if candidate.suffix.lower() != ".csv":
         raise ValueError("Only .csv files are allowed")
+
     if not candidate.exists():
         raise FileNotFoundError(f"CSV file not found: {file_name}")
 
@@ -39,12 +37,7 @@ def safe_csv_path(file_name: str) -> Path:
 
 
 @mcp.tool
-def load_sales_summary(file_name: str = DEFAULT_CSV) -> dict[str, Any]:
-    """
-    Calculate total revenue, gross profit, and margin from a local CSV file.
-
-    The tool is read-only and accepts only CSV files from the demo directory.
-    """
+def load_sales_summary(file_name: str = DEFAULT_CSV) -> dict[str, object]:
     orders = 0
     revenue = 0.0
     gross_profit = 0.0
@@ -78,7 +71,6 @@ def load_sales_summary(file_name: str = DEFAULT_CSV) -> dict[str, Any]:
 
 @mcp.resource("sales://metric-definitions")
 def metric_definitions_resource() -> str:
-    """Return static definitions of the metrics used by the sales tool."""
     return """\
 Визначення метрик продажів:
 
