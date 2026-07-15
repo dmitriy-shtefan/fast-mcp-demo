@@ -23,3 +23,27 @@ order_id,date,region,channel,product,category,quantity,unit_price,cost_per_unit,
 1022,2026-06-15,Kharkiv,Online,Analytics Dashboard,Software,5,3200,800,SMB
 1023,2026-06-19,Lviv,Partner,AI Support Bot,Software,1,7800,1500,Enterprise
 1024,2026-06-22,Odesa,Online,Data Audit,Service,1,12000,3500,Enterprise
+1025,2026-07-02,Kyiv,Partner,CRM Pro,Software,3,4500,900,Enterprise
+1026,2026-07-04,Lviv,Online,AI Support Bot,Software,2,7800,1500,SMB
+1027,2026-07-07,Kharkiv,Direct,Data Audit,Service,1,12000,3500,Enterprise
+1028,2026-07-10,Dnipro,Online,Analytics Dashboard,Software,4,3200,800,Startup
+1029,2026-07-14,Odesa,Partner,CRM Pro,Software,2,4500,900,SMB
+1030,2026-07-18,Kyiv,Direct,AI Support Bot,Software,1,7800,1500,Enterprise
+1031,2026-07-23,Lviv,Online,Data Audit,Service,2,12000,3500,Enterprise
+1032,2026-07-28,Kharkiv,Partner,Analytics Dashboard,Software,3,3200,800,SMB
+1033,2026-08-01,Dnipro,Direct,CRM Pro,Software,2,4500,900,Startup
+1034,2026-08-03,Kyiv,Online,AI Support Bot,Software,4,7800,1500,Enterprise
+1035,2026-08-06,Odesa,Partner,Data Audit,Service,1,12000,3500,SMB
+1036,2026-08-09,Lviv,Direct,Analytics Dashboard,Software,5,3200,800,Startup
+1037,2026-08-13,Kharkiv,Online,CRM Pro,Software,3,4500,900,SMB
+1038,2026-08-17,Dnipro,Partner,AI Support Bot,Software,1,7800,1500,Enterprise
+1039,2026-08-21,Kyiv,Direct,Data Audit,Service,1,12000,3500,Enterprise
+1040,2026-08-26,Odesa,Online,Analytics Dashboard,Software,2,3200,800,SMB
+1041,2026-09-02,Lviv,Partner,CRM Pro,Software,4,4500,900,SMB
+1042,2026-09-05,Kharkiv,Online,AI Support Bot,Software,2,7800,1500,Enterprise
+1043,2026-09-08,Dnipro,Direct,Data Audit,Service,1,12000,3500,Enterprise
+1044,2026-09-12,Kyiv,Partner,Analytics Dashboard,Software,3,3200,800,Startup
+1045,2026-09-16,Odesa,Online,CRM Pro,Software,2,4500,900,SMB
+1046,2026-09-20,Lviv,Direct,AI Support Bot,Software,1,7800,1500,Enterprise
+1047,2026-09-24,Kharkiv,Partner,Data Audit,Service,2,12000,3500,SMB
+1048,2026-09-28,Dnipro,Online,Analytics Dashboard,Software,4,3200,800,Startup
