@@ -1,26 +1,6 @@
-"""
-FastMCP demo: sales analytics from a local CSV file.
-
-What this demonstrates:
-- MCP tools as small typed Python functions.
-- Read-only access to business data.
-- Resources for static context.
-- A reusable prompt for an AI sales analyst.
-
-Setup:
-    pip install fastmcp
-
-Run as an MCP server:
-    python3 sales_mcp_server.py
-
-Run local preview without an MCP host:
-    python3 sales_mcp_server.py --demo
-"""
-
 from __future__ import annotations
 
 import csv
-import json
 import os
 import sys
 from collections import defaultdict
@@ -265,28 +245,8 @@ def sales_report_prompt(company_context: str = "B2B SaaS компанія") -> s
 """.strip()
 
 
-def run_local_demo() -> None:
-    print("\n=== Sales MCP local preview ===\n")
-    print("Tool: load_sales_summary")
-    print(json.dumps(load_sales_summary(), ensure_ascii=False, indent=2))
-
-    print("\nTool: top_products(metric='revenue')")
-    print(json.dumps(top_products(metric="revenue"), ensure_ascii=False, indent=2))
-
-    print("\nTool: monthly_sales_report")
-    print(json.dumps(monthly_sales_report(), ensure_ascii=False, indent=2))
-
-    print("\nResource: sales://business-questions")
-    print(business_questions_resource())
-
-    print("\nPrompt: sales_report_prompt")
-    print(sales_report_prompt())
-
-
 def main() -> None:
-    if "--demo" in sys.argv:
-        run_local_demo()
-    elif should_run_http():
+    if should_run_http():
         mcp.run(
             transport="http",
             host=os.environ.get("HOST", "0.0.0.0"),
