@@ -30,7 +30,7 @@ def safe_csv_path(file_name: str) -> Path:
 
     return candidate
 
-
+@mcp.tool
 def load_sales_summary(file_name: str = "sales_summary.csv") -> dict[str, object]:
     orders = 0
     revenue = 0.0
