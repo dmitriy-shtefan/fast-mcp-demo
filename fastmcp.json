@@ -1,12 +1,12 @@
 {
   "$schema": "https://gofastmcp.com/public/schemas/fastmcp.json/v1.json",
   "source": {
-    "path": "",
-    "entrypoint": ""
+    "path": "sales_mcp_server.py",
+    "entrypoint": "mcp"
   },
   "environment": {
-    "python": "",
-    "requirements": ""
+    "python": ">=3.11",
+    "requirements": "requirements.txt"
   },
   "deployment": {
     "transport": "http",
